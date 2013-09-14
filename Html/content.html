@@ -1,0 +1,47 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+ <HEAD>
+  <TITLE> Content  </TITLE>
+ </HEAD>
+<style>
+	 body
+	 {
+		padding-top:40px;
+		background-color:black;
+	 }
+	p
+	{
+		padding:10px 90px 0px 90px;
+		font-size:20px;
+		color:skyblue;
+	}
+
+</style>
+
+<BODY>
+<center>
+<img src="slide_img_01.jpg" name="slide">
+</center>
+<script>
+	var image1 = new Image();
+	image1.src = "slide_img_01.jpg";
+	var image2 = new Image();
+	image2.src = "slide_img_02.jpg";
+	var step=1;
+        function slideit()
+        {
+            document.images.slide.src = eval("image"+step+".src");
+            if(step<2)
+                step++;
+            else
+                step=1;
+            setTimeout("slideit()",2500);
+        }
+        slideit();
+</script>
+	<p>ABC’s mission is to take to people information, knowledge and skills in all possible fields and forms, using relevant technology in an entertaining way, through ingenious enterprises that make them erudite, wise, and creative and compel them to participate intensively in human pursuits to usher in an era of maximized living experience.</p>
+	<p>In the world of increased competition, one misstep can leave a business far behind the others and even end in total failure. Decisions that are a shot in the dark can leave a business falling down an abyss of lost customers, disgruntled employees and botched finances.</p>
+	<p>Knowing the outcome of each path past a decision point is critical to stay ahead of the competition. For accurate prediction of outcomes, human forecasters are subjective, expensive and can be way off the mark with accuracy. An automated forecaster is the obvious choice.</p>
+	<p>We at ABC believe in our solutions and so will take responsibility for any inaccurate forecast that our solutions may put out.</p>
+</BODY>
+</HTML>

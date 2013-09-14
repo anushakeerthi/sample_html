@@ -1,0 +1,118 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+ <HEAD>
+  <TITLE> New Document </TITLE>
+  <script>
+	function create()
+	   {
+			name=new String();
+			name=document.regis.name.value;
+			if(name.length==0)
+			alert("enter your name");
+			else
+			checkName(name);
+		}
+	  function checkName(name)
+	   {
+			var strsplchar=/[A-Za-z]/;
+			//var strsplchar=/\w\/;
+			if(!name.match(strsplchar))
+			alert("Special Characters are not allowed");
+			else
+			checkpwd();
+	   }
+	  function checkpwd()
+	  {
+		  pwd=new String();
+		  pwd=document.regis.pwd.value;
+		  if(pwd=="")
+			alert("enter your password");
+		  else if(pwd.length<8 && pwd.length!=0)
+		  alert("Password must be atleast 8 characters");
+		  else
+		  confirm_pwd();
+	  }
+
+	  function confirm_pwd()
+	  {
+		  c_pwd=new String();
+		  c_pwd=document.regis.c_pwd.value;
+		  if(c_pwd=="")
+		  {
+		  alert("Confirm your password");
+		  return true;
+		  }
+		  else
+		  checkbothpwd();
+	  }
+
+	  function checkbothpwd()
+	  {
+		  if(pwd!=c_pwd)
+		  alert("Password and Confirm password must be same");
+		  else
+		  checkemail();
+	  }
+
+	  function checkemail()
+	  {
+		  mail=new String();
+		  mail=document.regis.mail.value;
+		  if(mail=="")
+		  alert("please enter your email address");
+		  else
+		  {
+		  alert("Registered successfully");
+		  window.close();
+		  }
+	  }
+  </script>
+  <style>
+	  form
+	  {
+		  width:500px;
+		  padding:50px 0px 0px 50px;
+	  }
+	  label
+	  {
+		  float:left;
+		  width:150px;
+		  font-size:20px;
+	   }
+	  input[type=text]
+	  {
+		  float:left;
+		  width:260px;
+	  }
+	  input[type=password]
+	  {
+		  float:left;
+		  width:260px;
+	  }	
+	  center{font-size:22px;}
+	  body{background-color:LightBlue;}				  
+
+  </style>
+
+ </HEAD>
+
+ <BODY>
+  <FORM name ="regis" type="form" method="post" >
+		<h1 style="font-size:22px;color:gray">Create Login</h1><hr width=1200px>
+			<label for="name">Name</label> <input type="text" name="name"><br><br><br>
+			<label for="pwd">Password</label> <input type="password" name="pwd"><br><br><br>
+			<label for="c_pwd">Confirm Password</label> <input type="password" name="c_pwd"><br><br><br>
+			<label for="mail">Email-id</label> <input type="text" name="mail"><br><br><br>
+		<p><b>Passoword guidelines</b></p>
+		<ul>
+			<li>Your password must be a minimum of 6 and a maximum of 25 characters.</li>
+			<li>Your password will be case-sensitive.</li>
+		</ul>
+		<center>
+			<input type="submit"  value="Create" onClick="return create()">
+			<input type="submit"  value="Cancel" onClick="return cancel()">
+		</center>
+	</FORM>
+
+ </BODY>
+</HTML>

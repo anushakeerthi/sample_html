@@ -1,0 +1,74 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"> -->
+<HTML>
+ <HEAD>
+ <base target="content" />
+  <TITLE> Menu </TITLE>
+  <link rel="stylesheet" type="text/css" href="foundation.css"></link>
+ 
+ <STYLE>
+  	body
+	{
+		background-color:black;
+	}
+	.menubar li
+	{
+		display:block;
+		float:left;
+		padding:0px 14px 0px 14px;
+		position:relative;
+		text-align:center;
+		font-size:20px;
+		margin-left:20px;
+		border:none;
+	}
+	.menubar li:hover a
+	{
+		color:#fff;
+	}
+   .menubar 
+   {
+      list-style-type:none;
+	  border-radius:10px;
+	  -moz-border-radius:10px;
+	  -webkit-border-radius:10px;
+	  margin:0px auto 0px auto;
+	  width:870px;
+	  height:45px;
+      box-shadow: inset 1px 1px 10px #FFFFFF;
+      -moz-box-shadow: inset 1px 1px 10px #FFFFFF;
+      -webkit-box-shadow: inset 1px 1px 10px #FFFFFF;
+      border:1px solid #000;
+    }
+	#wel
+	{
+		color:red;
+		padding-left:1100px;
+		font-size:22px;
+	}
+
+  </STYLE>
+  <script>
+	function loginform(url)
+	{
+		var retval=window.open(url);
+		document.getElementById('wel').innerHTML="welcome"+retval;
+	}
+  </script>
+  </HEAD>
+
+ <BODY>
+ <div id='wel'></div>
+ <div class='menubar'> 
+            <ul>
+                <li><a href="content.html" style="text-decoration:none">Home</a></li>
+                <li><a href="#" style="text-decoration:none">About Us</a></li>
+                <li><a href="#" style="text-decoration:none">Services</a></li>
+				<li><a href="contact.html" style="text-decoration:none">Contact Us</a></li>
+				<li><a href="Javascript:loginform('Log.html');" style="text-decoration:none">Sign in</a></li>
+				<li style="color:skyblue">New User?<a href="register.html" style="text-decoration:none">Click here</a></li>
+            </ul> 
+    </div><br>
+</BODY>
+</HTML>
